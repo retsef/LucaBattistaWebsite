@@ -45,13 +45,13 @@
 <link rel="stylesheet" href="css/nivo_themes/default/default.css">
 
 <!-- COLORS -->
-<link rel="stylesheet" href="css/colors/blue.css"> <!-- DEFAULT COLOR/ CURRENTLY USING -->
+<!--<link rel="stylesheet" href="css/colors/blue.css"> <!-- DEFAULT COLOR/ CURRENTLY USING -->
 <!-- <link rel="stylesheet" href="css/colors/red.css"> -->
 <!-- <link rel="stylesheet" href="css/colors/green.css"> -->
 <!-- <link rel="stylesheet" href="css/colors/purple.css"> -->
 <!-- <link rel="stylesheet" href="css/colors/orange.css"> -->
 <!-- <link rel="stylesheet" href="css/colors/blue-munsell.css"> -->
-<!-- <link rel="stylesheet" href="css/colors/slate.css"> -->
+<link rel="stylesheet" href="css/colors/slate.css">
 <!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
 
 <!-- CUSTOM STYLESHEETS -->
@@ -69,6 +69,13 @@
       After neccessary customization/modification, Please minify HTML/CSS according to http://browserdiet.com/en/ for better performance
      **************** -->
      
+
+<?php
+    define('ROOT_PATH', realpath(__DIR__));
+    define('FACEBOOK_SDK_V4_SRC_DIR', './facebook/src/Facebook/');
+    require ROOT_PATH . '/facebook/autoload.php';
+?>
+
 </head>
 
 <body>
@@ -102,7 +109,7 @@
 <!-- =========================
      SECTION 4   
 ============================== -->
-<?php include './parts/section4.html'; ?>
+<?php include './parts/section4.php'; ?>
 
 <!-- =========================
      SECTION 5   

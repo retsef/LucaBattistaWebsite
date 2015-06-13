@@ -230,7 +230,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Raleway', sans-serif;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	color: #323232;
 	margin-bottom: 0;
 	margin-top: 0;
@@ -371,7 +371,7 @@ h6 {
    4.2.1 BASIC STYLES               
 -----------------------------------------*/
 header {
-	background: url(../images/pic/lucabg.jpg) no-repeat center top fixed;
+	background: url(../images/pic/foto_copertina.jpg) no-repeat center top fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
