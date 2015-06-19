@@ -1,4 +1,4 @@
-<section class="section4 bgcolor-2" id="section4">
+<section class="section4 news-section" id="section4">
     <div class="container">
 
         <?php

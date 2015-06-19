@@ -2,11 +2,11 @@
     <div class="container">
 
         <div class="footer-logo">
-            <img src="images/logo-dark.png" alt="">
+            <img src="" alt="">
         </div>
 
         <div class="copyright">
-            ©2014 LandX Template LLC.
+            ©<?php echo date("Y") ?> Made by Roberto Scinocca and Barile Vittorio
         </div>
 
         <ul class="social-icons">

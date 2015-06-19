@@ -122,11 +122,6 @@
 <?php include './parts/section6.html'; ?>
 
 <!-- =========================
-     SECTION 7  
-============================== -->
-<?php include './parts/section7.html'; ?>
-
-<!-- =========================
      SECTION 8 - CTA  
 ============================== -->
 <?php include './parts/section8.html'; ?>
@@ -139,7 +134,7 @@
 <!-- =========================
      SECTION 10 - FOOTER 
 ============================== -->
-<?php include './parts/section10.html'; ?>
+<?php include './parts/section10.php'; ?>
 
 <!-- =========================
      SCRIPTS   

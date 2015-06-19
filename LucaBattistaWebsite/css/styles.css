@@ -817,6 +817,40 @@ object {
 }
 
 
+/*
+    NEVS
+*/
+
+.news-section {
+	background: url(../images/pic/foto_interno.jpg) no-repeat fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.news-section h4 {
+	color: #ffffff;
+}
+
+.news-section h2 {
+	color: #ffffff;
+	font-weight: 700;
+	margin-top: 15px;
+	margin-bottom: 40px;
+}
+
+.news-section h3 {
+	color: #ffffff;
+}
+
+.news-section .sub-heading {
+	color: #ffffff;
+}
+
+.news-section .color-overlay {
+	padding-top: 125px;
+	padding-bottom: 125px;
+}
+
 /*---------------------------------------
    4.9.2 SUBSCRIBE FORM           
 -----------------------------------------*/
