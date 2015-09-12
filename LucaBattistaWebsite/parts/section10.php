@@ -9,6 +9,7 @@
             ©<?php echo date("Y") ?> Made by Roberto Scinocca and Barile Vittorio
         </div>
 
+        <!--
         <ul class="social-icons">
             <li><a href=""><span class="social_facebook_square"></span></a></li>
             <li><a href=""><span class="social_twitter_square"></span></a></li>
@@ -17,6 +18,7 @@
             <li><a href=""><span class="social_instagram_square"></span></a></li>
             <li><a href=""><span class="social_linkedin_square"></span></a></li>
         </ul>
+        -->
 
     </div>
 </footer>

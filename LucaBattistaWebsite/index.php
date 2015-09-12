@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="Responsive Bootstrap Multi-Purpose Landing Page Template">
-<meta name="keywords" content="LandX, Bootstrap, Landing page, Template, Registration, Landing">
-<meta name="author" content="Mizanur Rahman">
+<meta name="description" content="Luca Battista Website">
+<meta name="keywords" content="Luca, Battista, LucaBattista">
+<meta name="author" content="roberto Scinocca, Vittorio Barile">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <!-- SITE TITLE -->
@@ -13,10 +13,6 @@
 <!-- =========================
       FAV AND TOUCH ICONS  
 ============================== -->
-<link rel="icon" href="images/favicon.ico">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
 <!-- =========================
      STYLESHEETS   
@@ -36,8 +32,6 @@
 <link rel="stylesheet" href="assets/elegant-icons/style.css">
 <!--[if lte IE 7]><script src="assets/elegant-icons/lte-ie7.js"></script><![endif]-->
 
-
-
 <!-- CAROUSEL AND LIGHTBOX -->
 <link rel="stylesheet" href="css/owl.theme.css">
 <link rel="stylesheet" href="css/owl.carousel.css">
@@ -53,6 +47,16 @@
 <!-- <link rel="stylesheet" href="css/colors/blue-munsell.css"> -->
 <link rel="stylesheet" href="css/colors/slate.css">
 <!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
+
+<!-- PLAYER -->
+<script type="text/javascript" src="js/soundmanager2.js"></script>
+<script type="text/javascript" src="js/berniecode-animator.js"></script>
+<script type="text/javascript" src="js/360player.js"></script>
+<script type="text/javascript" src="swf/swfobject.js"></script>
+<link rel="stylesheet" type="text/css" href="css/inlineplayer.css" />
+<script type="text/javascript" src="js/inlineplayer.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/360player.css" />
 
 <!-- CUSTOM STYLESHEETS -->
 <link rel="stylesheet" href="css/styles.css">
@@ -83,7 +87,7 @@
      PRE LOADER       
 ============================== -->
 <div class="preloader">
-  <div class="status">&nbsp;</div>
+  <div class="status"> </div>
 </div>
 
 <!-- =========================
@@ -109,17 +113,17 @@
 <!-- =========================
      SECTION 4   
 ============================== -->
-<?php include './parts/section4.php'; ?>
+<?php //include './parts/section4.php'; ?>
 
 <!-- =========================
      SECTION 5   
 ============================== -->
-<?php include './parts/section5.html'; ?>
+<?php //include './parts/section5.html'; ?>
 
 <!-- =========================
      SECTION 6   
 ============================== -->
-<?php include './parts/section6.html'; ?>
+<?php //include './parts/section6.html'; ?>
 
 <!-- =========================
      SECTION 8 - CTA  
