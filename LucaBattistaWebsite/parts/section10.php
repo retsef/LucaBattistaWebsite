@@ -2,11 +2,10 @@
     <div class="container">
 
         <div class="footer-logo">
-            <img src="" alt="">
         </div>
 
         <div class="copyright">
-            ©<?php echo date("Y") ?> Made by Roberto Scinocca and Barile Vittorio
+            ©<?php echo date("Y") ?> Made by Roberto Scinocca and Vittorio Barile
         </div>
 
         <!--

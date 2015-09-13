@@ -958,8 +958,8 @@ object {
    4.11 SECTION: FOOTER             
 ==========================================*/
 footer {
-	padding-top: 75px;
-	padding-bottom: 75px;
+	padding-top: 40px;
+	padding-bottom: 15px;
 }
 
 .footer-logo {
