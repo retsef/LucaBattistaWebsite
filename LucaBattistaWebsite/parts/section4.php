@@ -1,28 +1,5 @@
 <section class="section4 news-section" id="section4">
     <div class="container">
-
-        <?php
-
-            use Facebook\FacebookSession;
-            use Facebook\FacebookRequest;
-            use Facebook\GraphUser;
-            use Facebook\FacebookRequestException;
-
-            FacebookSession::setDefaultApplication('YOUR_APP_ID','YOUR_APP_SECRET');
-            $session = new FacebookSession('access-token-here');
-
-            try {
-              $me = (new FacebookRequest(
-                $session, 'GET', '/me'
-              ))->execute()->getGraphObject(GraphUser::className());
-              echo $me->getName();
-            } catch (FacebookRequestException $e) {
-              echo "Facebook non funge!";
-            } catch (\Exception $e) {
-              echo "Facebook non sa da fare";
-            }
-
-        ?>
         
         <!-- SECTION HEADING -->
         <h2>News</h2>
