@@ -1,18 +1,44 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+$(function() {
+   $.getJSON('../content/contacts.json', function(data) {
+       
+       $.each(data, function(i, f) {
+           var listRow;
+           switch(f.type) {
+                case "email":
+                    listRow = "<div class=\"row\">"+
+                            "<div class=\"col-md-8 col-md-offset-2\">"+
+                                "<a href=\"mailto:"+f.contact+"\" class=\"contact-link\"><span class=\"icon_mail_alt\"></span>Mail</a>"
+                           +"</div>"+
+                        "</div>";
+                    break;
+                case "phone":
+                    listRow = "<div class=\"row\">"+
+                            "<div class=\"col-md-8 col-md-offset-2\">"+
+                                "<a href=\"#section9\" class=\"contact-link\"><span class=\"glyphicon glyphicon-earphone\"></span>"+f.contact+"</a>"
+                           +"</div>"+
+                        "</div>";
+                    break;
+                default:
+                    break;
+            }
+            
+            $(listRow).appendTo("#contact_container");
+           
+       });
+
+   });
+});
+</script>
+
 <section class="contact-us" id="section9">
-    <div class="container">
+    <div class="container" id="contact_container">
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-
                 <h3 class="heading">Contattaci</h3>
-                <a href="mailto:lucabattista.web@gmail.com" class="contact-link"><span class="icon_mail_alt"></span>Mail</a>
-
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <a href="#section9" class="contact-link"><span class="glyphicon glyphicon-earphone"></span> 320 8013428 </a>
             </div>
         </div>
 

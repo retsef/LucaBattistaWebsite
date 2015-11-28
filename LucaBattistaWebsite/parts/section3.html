@@ -1,10 +1,27 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+$(function() {
+   $.getJSON('../content/music.json', function(data) {
+       
+       $.each(data, function(i, f) {
+           
+            $( "#music_title" ).replaceWith( "<h2>"+f.album+"</h2>" );
+            var listRow = "<li style=\"margin-bottom: 32.5px; margin-top: 10px\"> <a href=\""+f.path+"\">"+f.name+"</a> </li>"
+             $(listRow).appendTo("#music_list");
+       });
+
+   });
+});
+</script>
+
 <section class="section3" id="section3">
     
     <div class="container">
         
         <!-- SECTION HEADING -->
             
-        <h2>Dance Mix</h2>
+        <h2 id="music_title">Dance Mix</h2>
             
         <div class="features">
             <!-- FEATURES ROW 2 -->
@@ -20,13 +37,7 @@
                     </div>
                         
                     <div class="col-md-4">
-                        <ul class="graphic">
-                            <li style="margin-bottom: 32.5px; margin-top: 10px"> <a href="mp3/Bach - demo.mp3">Bach</a> </li>
-                            <li style="margin-bottom: 32.5px"> <a href="mp3/Dance of shadows - demo.mp3">Dance of shadows</a> </li>
-                            <li style="margin-bottom: 32.5px"> <a href="mp3/I like chopin - demo.mp3">I like chopin</a> </li>
-                            <li style="margin-bottom: 32.5px"> <a href="mp3/Paradise - demo.mp3">Paradise</a> </li>
-                            <li style="margin-bottom: 32.5px"> <a href="mp3/Tango mix - demo.mp3">Tango mix</a> </li>
-                            <li style="margin-bottom: 32.5px"> <a href="mp3/bora bora - demo.mp3">Bora Bora</a> </li>
+                        <ul class="graphic" id="music_list">
                         </ul>
                     </div>
                 </div>
