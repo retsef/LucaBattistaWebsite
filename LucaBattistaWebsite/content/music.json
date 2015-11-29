@@ -1,32 +1,32 @@
 [ 
     {
-        "album": "Organetto Dance",
-        "name": "Bach",
-        "path": "mp3/Bach - demo.mp3"
-    },
-    {
-        "album": "Organetto Dance",
-        "name": "Dance of shadows",
-        "path": "mp3/Dance of shadows - demo.mp3"
-    },
-    {
-        "album": "Organetto Dance",
-        "name": "I like chopin",
-        "path": "mp3/I like chopin - demo.mp3"
-    },
-    {
-        "album": "Organetto Dance",
-        "name": "Paradise",
-        "path": "mp3/Paradise - demo.mp3"
-    },
-    {
-        "album": "Organetto Dance",
-        "name": "Tango mix",
-        "path": "mp3/Tango mix - demo.mp3"
-    },
-    {
-        "album": "Organetto Dance",
-        "name": "Bora Bora",
-        "path": "mp3/bora bora - demo.mp3"
+        "name": "Organetto Dance",
+        "cover": "images/pic/copertina_cd.png",
+        "tracks": [
+            {
+                "name": "Bach",
+                "path": "mp3/Bach - demo.mp3"
+            },
+            {
+                "name": "Dance of shadows",
+                "path": "mp3/Dance of shadows - demo.mp3"
+            },
+            {
+                "name": "I like chopin",
+                "path": "mp3/I like chopin - demo.mp3"
+            },
+            {
+                "name": "Paradise",
+                "path": "mp3/Paradise - demo.mp3"
+            },
+            {
+                "name": "Tango mix",
+                "path": "mp3/Tango mix - demo.mp3"
+            },
+            {
+                "name": "Bora Bora",
+                "path": "mp3/bora bora - demo.mp3"
+            }
+        ]
     }
 ]

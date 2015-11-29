@@ -83,26 +83,33 @@
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <h2>Titolo</h2>
-                        <div class="input-group" id="bio_title">
+                        <div class="input-group" id="bio_title" style="width: 1%; display: table-cell;">
                             <input type="text" class="form-control" placeholder="Titolo" aria-describedby="basic-addon1">
                           </div>
                     </div>
                 </div>
                 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <h2>Descrizione</h2>
-                        <div class="input-group" id="bio_description">
-                            <input type="text" class="form-control" placeholder="Descrizione" aria-describedby="basic-addon1">
+                        <div class="input-group" id="bio_description" style="width: 1%; display: table-cell;">
+                            <textarea type="text" class="form-control" placeholder="Descrizione"  rows="7" aria-describedby="basic-addon1" required></textarea> 
                           </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>Foto</h2>
+                        <img id="bio_photo" width="350px" src=""/>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-12">
-                        <button type="button" style="margin-top: 50px" class="btn btn-primary btn-lg">
+                    <div class="col-md-12">
+                        <button id="savebtn" type="button" style="margin-top: 50px" class="btn btn-primary btn-lg">
                             <span class="glyphicon glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> 
                             Salva
                           </button>
@@ -119,10 +126,34 @@
                    $.getJSON('../../../../content/bio.json', function(data) {
 
                        $("#bio_title input").val(data.title);
-                       $("#bio_description input").val(data.description);
+                       $("#bio_description textarea").val(data.description);
+                       $("#bio_photo").replaceWith("<img id=\"bio_photo\" width=\"350px\" src=\"../"+data.photo+"\"/>")
 
                    });
                 });
+                </script>
+                
+                <script>
+                    $('#savebtn').click(function() {
+                    
+                        var json = 
+                        "{\n"+
+                            "\"title\":"+"\""+$("#bio_title input").val()+"\""+",\n"+
+                            "\"description\":"+"\""+$("#bio_description textarea").val()+"\""+",\n"+
+                            "\"photo\":"+"\""+"images/pic/foto_interno.jpg"+"\"\n"+
+                        "}";
+
+                        $.ajax
+                        ({
+                            type: "GET",
+                            contentType : 'application/json',   
+                            async: false,
+                            url: './save_json.php',
+                            data: {'file':"../content/bio.json",'data':json},//JSON.stringify(json),
+                            success: function () {alert("Salvataggio riuscito!"); },
+                            failure: function() {alert("Errore!");}
+                        });
+                    });
                 </script>
             
         </div>

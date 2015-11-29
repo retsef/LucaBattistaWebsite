@@ -7,6 +7,7 @@ $(function() {
        
        $( "#bio_title" ).replaceWith( "<h2>"+data.title+"</h2>" );
        $( "#bio_description" ).replaceWith( "<p>"+data.description+"</p>" );
+       $( "#bio_photo" ).replaceWith( "<img id=\"bio_photo\" src=\""+data.photo+"\" alt=\"Feature\" class=\"img-responsive\">" );
 
    });
 });
@@ -36,7 +37,7 @@ $(function() {
             <div class="col-md-6">
                 <!-- SCREENSHOT -->
                 <div class="side-screenshot2 pull-right">
-                    <img src="images/pic/foto_interno.jpg" alt="Feature" class="img-responsive">
+                    <img id="bio_photo" src="images/pic/foto_interno.jpg" alt="Feature" class="img-responsive">
                 </div>
             </div>
 
