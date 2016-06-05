@@ -1,5 +1,5 @@
 <!-- BOOTSTRAP -->
-<link rel="stylesheet" href="../public/assets/stylesheets/bootstrap.min.css">
+<link href="{!! url('css/bootstrap.min.css') !!}" media="all" rel="stylesheet" type="text/css" />
 
 <!-- FONT ICONS -->
 <!-- IonIcons -->
@@ -37,6 +37,6 @@
 <link rel="stylesheet" href="../public/assets/stylesheets/responsive.css">
 
 <!--[if lt IE 9]>
-<script src="../public/assets/javascripts/html5shiv.js"></script>
-<script src="../public/assets/javascripts/respond.min.js"></script>
+<script src="../public/assets/js/html5shiv.js"></script>
+<script src="../public/assets/js/respond.min.js"></script>
 <![endif]-->

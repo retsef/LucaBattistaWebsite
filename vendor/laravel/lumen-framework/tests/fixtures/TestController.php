@@ -1,11 +1,7 @@
-<?php
+<?php namespace Lumen\Tests;
 
-namespace Lumen\Tests;
-
-class TestController
-{
-    public function action()
-    {
+class TestController {
+    public function action() {
         return __CLASS__;
     }
 }

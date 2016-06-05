@@ -1,12 +1,11 @@
-<?php
-
-namespace Laravel\Lumen\Testing;
+<?php namespace Laravel\Lumen\Testing;
 
 use Illuminate\View\View;
 use PHPUnit_Framework_Assert as PHPUnit;
 
 trait AssertionsTrait
 {
+
     /**
      * Assert that the client response has an OK status code.
      *
@@ -95,7 +94,7 @@ trait AssertionsTrait
      * @param  array   $with
      * @return void
      */
-    public function assertRedirectedTo($uri, $with = [])
+    public function assertRedirectedTo($uri, $with = array())
     {
         PHPUnit::assertInstanceOf('Illuminate\Http\RedirectResponse', $this->response);
 
@@ -112,7 +111,7 @@ trait AssertionsTrait
      * @param  array   $with
      * @return void
      */
-    public function assertRedirectedToRoute($name, $parameters = [], $with = [])
+    public function assertRedirectedToRoute($name, $parameters = array(), $with = array())
     {
         $this->assertRedirectedTo($this->app['url']->route($name, $parameters), $with);
     }
@@ -161,7 +160,7 @@ trait AssertionsTrait
      * @param  mixed  $format
      * @return void
      */
-    public function assertSessionHasErrors($bindings = [], $format = null)
+    public function assertSessionHasErrors($bindings = array(), $format = null)
     {
         $this->assertSessionHas('errors');
 

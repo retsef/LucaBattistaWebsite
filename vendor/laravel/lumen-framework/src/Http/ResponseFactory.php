@@ -1,6 +1,4 @@
-<?php
-
-namespace Laravel\Lumen\Http;
+<?php namespace Laravel\Lumen\Http;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Response;
@@ -10,6 +8,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class ResponseFactory
 {
+
     /**
      * Return a new response from the application.
      *
@@ -18,7 +17,7 @@ class ResponseFactory
      * @param  array   $headers
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function make($content = '', $status = 200, array $headers = [])
+    public function make($content = '', $status = 200, array $headers = array())
     {
         return new Response($content, $status, $headers);
     }
@@ -32,7 +31,7 @@ class ResponseFactory
      * @param  int    $options
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function json($data = [], $status = 200, array $headers = [], $options = 0)
+    public function json($data = array(), $status = 200, array $headers = array(), $options = 0)
     {
         if ($data instanceof Arrayable) {
             $data = $data->toArray();
@@ -50,7 +49,7 @@ class ResponseFactory
      * @param  null|string  $disposition
      * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      */
-    public function download($file, $name = null, array $headers = [], $disposition = 'attachment')
+    public function download($file, $name = null, array $headers = array(), $disposition = 'attachment')
     {
         $response = new BinaryFileResponse($file, 200, $headers, true, $disposition);
 

@@ -1,15 +1,15 @@
-<?php
-
-namespace Laravel\Lumen\Http\Middleware;
+<?php namespace Laravel\Lumen\Http\Middleware;
 
 use Closure;
+use Illuminate\Contracts\Routing\Middleware;
 use Symfony\Component\HttpFoundation\Cookie;
 use Illuminate\Contracts\Encryption\Encrypter;
 use Illuminate\Session\TokenMismatchException;
 use Symfony\Component\Security\Core\Util\StringUtils;
 
-class VerifyCsrfToken
+class VerifyCsrfToken implements Middleware
 {
+
     /**
      * The encrypter implementation.
      *
@@ -33,7 +33,7 @@ class VerifyCsrfToken
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
-     * @return \Illuminate\Http\Response
+     * @return mixed
      *
      * @throws \Illuminate\Session\TokenMismatchException
      */

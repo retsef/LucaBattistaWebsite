@@ -1,12 +1,11 @@
-<?php
-
-namespace Laravel\Lumen\Routing;
+<?php namespace Laravel\Lumen\Routing;
 
 use Laravel\Lumen\Application;
 use Illuminate\Contracts\Routing\UrlRoutable;
 
 class UrlGenerator
 {
+
     /**
      * The application instance.
      *
@@ -27,13 +26,6 @@ class UrlGenerator
      * @var string|null
      */
     protected $cachedRoot;
-
-    /**
-     * The URL schema to be forced on all generated URLs.
-     *
-     * @var string|null
-     */
-    protected $forceSchema;
 
     /**
      * Create a new URL redirector instance.
@@ -64,17 +56,17 @@ class UrlGenerator
     public function current()
     {
         return $this->to($this->app->make('request')->getPathInfo());
-    }
+    }    
 
     /**
-     * Generate a url for the application.
+     * Generate a url for the application
      *
      * @param  string  $path
      * @param  array  $extra
      * @param  bool  $secure
      * @return string
      */
-    public function to($path, $extra = [], $secure = null)
+    public function to($path, $extra = array(), $secure = null)
     {
         // First we will check if the URL is already a valid URL. If it is we will not
         // try to generate a new one but will simply return the URL as is, which is
@@ -106,7 +98,7 @@ class UrlGenerator
      * @param  array   $parameters
      * @return string
      */
-    public function secure($path, $parameters = [])
+    public function secure($path, $parameters = array())
     {
         return $this->to($path, $parameters, true);
     }
@@ -120,32 +112,12 @@ class UrlGenerator
      */
     public function asset($path, $secure = null)
     {
-        if ($this->isValidUrl($path)) {
-            return $path;
-        }
+        if ($this->isValidUrl($path)) return $path;
 
         // Once we get the root URL, we will check to see if it contains an index.php
         // file in the paths. If it does, we will remove it since it is not needed
         // for asset paths, but only for routes to endpoints in the application.
         $root = $this->getRootUrl($this->getScheme($secure));
-
-        return $this->removeIndex($root).'/'.trim($path, '/');
-    }
-
-    /**
-     * Generate a URL to an application asset from a root domain such as CDN etc.
-     *
-     * @param  string  $root
-     * @param  string  $path
-     * @param  bool|null  $secure
-     * @return string
-     */
-    public function assetFrom($root, $path, $secure = null)
-    {
-        // Once we get the root URL, we will check to see if it contains an index.php
-        // file in the paths. If it does, we will remove it since it is not needed
-        // for asset paths, but only for routes to endpoints in the application.
-        $root = $this->getRootUrl($this->getScheme($secure), $root);
 
         return $this->removeIndex($root).'/'.trim($path, '/');
     }
@@ -182,8 +154,9 @@ class UrlGenerator
      */
     protected function getScheme($secure)
     {
-        if (is_null($secure)) {
-            return $this->forceSchema ?: $this->app->make('request')->getScheme().'://';
+        if (is_null($secure))
+        {
+            return $this->forceSchema ?: $this->request->getScheme().'://';
         }
 
         return $secure ? 'https://' : 'http://';
@@ -209,7 +182,7 @@ class UrlGenerator
      *
      * @throws \InvalidArgumentException
      */
-    public function route($name, $parameters = [])
+    public function route($name, $parameters = array())
     {
         if (! isset($this->app->namedRoutes[$name])) {
             throw new \InvalidArgumentException("Route [{$name}] not defined.");
@@ -217,9 +190,7 @@ class UrlGenerator
 
         $uri = $this->app->namedRoutes[$name];
 
-        $parameters = $this->formatParametersForUrl($parameters);
-
-        $uri = preg_replace_callback('/\{(.*?)(:.*?)?(\{[0-9,]+\})?\}/', function ($m) use (&$parameters) {
+        $uri = preg_replace_callback('/\{(.*?)(:.*?)?\}/', function ($m) use (&$parameters) {
             return isset($parameters[$m[1]]) ? array_pull($parameters, $m[1]) : $m[0];
         }, $uri);
 
@@ -283,9 +254,9 @@ class UrlGenerator
      * @param  array  $parameters
      * @return array
      */
-    protected function replaceRoutableParametersForUrl($parameters = [])
+    protected function replaceRoutableParametersForUrl($parameters = array())
     {
-        $parameters = is_array($parameters) ? $parameters : [$parameters];
+        $parameters = is_array($parameters) ? $parameters : array($parameters);
 
         foreach ($parameters as $key => $parameter) {
             if ($parameter instanceof UrlRoutable) {

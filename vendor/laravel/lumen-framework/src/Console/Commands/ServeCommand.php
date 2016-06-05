@@ -1,12 +1,10 @@
-<?php
-
-namespace Laravel\Lumen\Console\Commands;
+<?php namespace Laravel\Lumen\Console\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 
-class ServeCommand extends Command
-{
+class ServeCommand extends Command {
+
     /**
      * The console command name.
      *
@@ -19,7 +17,7 @@ class ServeCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Serve the application on the PHP development server';
+    protected $description = "Serve the application on the PHP development server";
 
     /**
      * Execute the console command.
@@ -48,10 +46,11 @@ class ServeCommand extends Command
      */
     protected function getOptions()
     {
-        return [
-            ['host', null, InputOption::VALUE_OPTIONAL, 'The host address to serve the application on.', 'localhost'],
+        return array(
+            array('host', null, InputOption::VALUE_OPTIONAL, 'The host address to serve the application on.', 'localhost'),
 
-            ['port', null, InputOption::VALUE_OPTIONAL, 'The port to serve the application on.', 8000],
-        ];
+            array('port', null, InputOption::VALUE_OPTIONAL, 'The port to serve the application on.', 8000),
+        );
     }
+
 }

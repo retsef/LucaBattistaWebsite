@@ -1,6 +1,4 @@
-<?php
-
-namespace Laravel\Lumen\Routing;
+<?php namespace Laravel\Lumen\Routing;
 
 use Closure as BaseClosure;
 use Illuminate\Http\Request;
@@ -8,7 +6,7 @@ use Illuminate\Validation\Validator;
 
 class Closure
 {
-    use DispatchesJobs, ValidatesRequests {
+    use DispatchesCommands, ValidatesRequests {
         ValidatesRequests::buildFailedValidationResponse as baseBuildFailedValidationResponse;
         ValidatesRequests::formatValidationErrors as baseFormatValidationErrors;
     }

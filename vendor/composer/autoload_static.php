@@ -9,8 +9,8 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
     public static $files = array (
         '65fec9ebcfbb3cbb4fd0d519687aea01' => __DIR__ . '/..' . '/danielstjules/stringy/src/Create.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '9f7f3f9b1f82484e76bcd07b985a2d2f' => __DIR__ . '/..' . '/symfony/var-dumper/Symfony/Component/VarDumper/Resources/functions/dump.php',
+        'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         'bee9632da3ca00a99623b9c35d0c4f8b' => __DIR__ . '/..' . '/laravel/lumen-framework/src/helpers.php',
@@ -19,19 +19,9 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Yaml\\' => 23,
-            'Symfony\\Component\\VarDumper\\' => 28,
-            'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\Security\\Core\\' => 32,
-            'Symfony\\Component\\Process\\' => 26,
-            'Symfony\\Component\\HttpKernel\\' => 29,
-            'Symfony\\Component\\HttpFoundation\\' => 33,
-            'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\EventDispatcher\\' => 34,
-            'Symfony\\Component\\DomCrawler\\' => 29,
             'Symfony\\Component\\Debug\\' => 24,
-            'Symfony\\Component\\Console\\' => 26,
             'Stringy\\' => 8,
         ),
         'M' => 
@@ -40,6 +30,7 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
         ),
         'L' => 
         array (
+            'League\\Flysystem\\' => 17,
             'Laravel\\Lumen\\' => 14,
         ),
         'I' => 
@@ -65,7 +56,6 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
             'Illuminate\\Config\\' => 18,
             'Illuminate\\Cache\\' => 17,
             'Illuminate\\Bus\\' => 15,
-            'Illuminate\\Broadcasting\\' => 24,
             'Illuminate\\Auth\\' => 16,
         ),
         'F' => 
@@ -89,57 +79,17 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
     );
 
     public static $prefixDirsPsr4 = array (
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
         'Symfony\\Component\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
-        ),
-        'Symfony\\Component\\VarDumper\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/var-dumper',
-        ),
-        'Symfony\\Component\\Translation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/translation',
-        ),
-        'Symfony\\Component\\Security\\Core\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/security-core',
-        ),
-        'Symfony\\Component\\Process\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/process',
-        ),
-        'Symfony\\Component\\HttpKernel\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/http-kernel',
-        ),
-        'Symfony\\Component\\HttpFoundation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/http-foundation',
-        ),
-        'Symfony\\Component\\Finder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/finder',
         ),
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
         ),
-        'Symfony\\Component\\DomCrawler\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/dom-crawler',
-        ),
         'Symfony\\Component\\Debug\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/debug',
-        ),
-        'Symfony\\Component\\Console\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/console',
         ),
         'Stringy\\' => 
         array (
@@ -148,6 +98,10 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'League\\Flysystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
         'Laravel\\Lumen\\' => 
         array (
@@ -237,10 +191,6 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
         array (
             0 => __DIR__ . '/..' . '/illuminate/bus',
         ),
-        'Illuminate\\Broadcasting\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/illuminate/broadcasting',
-        ),
         'Illuminate\\Auth\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/auth',
@@ -279,6 +229,41 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
                 0 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             ),
         ),
+        'S' => 
+        array (
+            'Symfony\\Component\\VarDumper\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/symfony/var-dumper',
+            ),
+            'Symfony\\Component\\Translation\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/symfony/translation',
+            ),
+            'Symfony\\Component\\Security\\Core\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/symfony/security-core',
+            ),
+            'Symfony\\Component\\Process\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/symfony/process',
+            ),
+            'Symfony\\Component\\HttpKernel\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/symfony/http-kernel',
+            ),
+            'Symfony\\Component\\HttpFoundation\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/symfony/http-foundation',
+            ),
+            'Symfony\\Component\\Finder\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/symfony/finder',
+            ),
+            'Symfony\\Component\\Console\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/symfony/console',
+            ),
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 
@@ -314,10 +299,6 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/illuminate/queue/IlluminateQueueClosure.php',
         'Illuminate\\Foundation\\Composer' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Foundation/Composer.php',
-        'Illuminate\\Foundation\\Support\\Providers\\EventServiceProvider' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Foundation/Support/Providers/EventServiceProvider.php',
-        'Illuminate\\Foundation\\Testing\\DatabaseMigrations' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Foundation/Testing/DatabaseMigrations.php',
-        'Illuminate\\Foundation\\Testing\\DatabaseTransactions' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Foundation/Testing/DatabaseTransactions.php',
-        'Illuminate\\Foundation\\Testing\\WithoutMiddleware' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Foundation/Testing/WithoutMiddleware.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
         'PHPUnit_Extensions_PhptTestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/PhptTestCase.php',
@@ -749,7 +730,7 @@ class ComposerStaticInit5fb94681d881964e9c08908c5df5f8a0
         'SebastianBergmann\\RecursionContext\\Exception' => __DIR__ . '/..' . '/sebastian/recursion-context/src/Exception.php',
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
-        'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Resources/stubs/SessionHandlerInterface.php',
+        'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
     );
