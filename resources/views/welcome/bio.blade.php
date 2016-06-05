@@ -9,12 +9,16 @@
                 <div class="brief text-left">
 
                     <!-- HEADING -->
-                    <h2 id="bio_title"></h2>
+                    <h2 id="bio_title">
+                        {{ $bio['title'] }}
+                    </h2>
                     <div class="colored-line pull-left">
                     </div>
 
                     <!-- TEXT -->
-                    <p id="bio_description"></p>
+                    <p id="bio_description">
+                        {{ $bio['description'] }}
+                    </p>
 
                 </div>
             </div>

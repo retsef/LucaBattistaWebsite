@@ -1,20 +1,24 @@
-<?php
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 class WelcomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
-        //
+
     }
 
     public function index() {
-        return view('welcome.index');
+        $json = $this->getJsonData();
+        return view('welcome.index')
+            ->with('bio', $json['bio'])
+            ->with('contacts', $json['contacts'])
+            ->with('musics', $json['musics'])
+            ->with('shops', $json['shops']);
+    }
+
+    private function getJsonData() {
+        $str = file_get_contents('public/contents/data.json');
+        $json = json_decode($str, true);
+        return $json;
     }
 }

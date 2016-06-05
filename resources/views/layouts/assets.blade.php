@@ -1,42 +1,42 @@
 <!-- BOOTSTRAP -->
-<link href="{!! url('css/bootstrap.min.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href={!! url("public/css/bootstrap.min.css") !!} media="all" rel="stylesheet" type="text/css" />
 
 <!-- FONT ICONS -->
 <!-- IonIcons -->
-<link rel="stylesheet" href="../public/assets/ionicons/css/ionicons.css">
+<link rel="stylesheet" href={!! url("public/assets/ionicons/css/ionicons.css") !!} >
 
-<!-- Font Awesome
-<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
--->
+<!-- Font Awesome -->
+<link rel="stylesheet" href={!! url("public/assets/font-awesome/css/font-awesome.min.css") !!} >
 
 <!-- Elegant Icons -->
-<link rel="stylesheet" href="../public/assets/elegant-icons/style.css">
+<link rel="stylesheet" href={!! url("public/assets/elegant-icons/style.css") !!}>
 <!--[if lte IE 7]>
-<script src="../public/assets/elegant-icons/lte-ie7.js"></script><![endif]-->
+    <script src={!! url("public/assets/elegant-icons/lte-ie7.js") !!}></script>
+<![endif]-->
 
 <!-- CAROUSEL AND LIGHTBOX -->
-<link rel="stylesheet" href="../public/assets/stylesheets/owl.theme.css">
-<link rel="stylesheet" href="../public/assets/stylesheets/owl.carousel.css">
-<link rel="stylesheet" href="../public/assets/stylesheets/nivo-lightbox.css">
-<link rel="stylesheet" href="../public/assets/stylesheets/nivo_themes/default/default.css">
+<link rel="stylesheet" href={!! url("public/css/owl.theme.css") !!}>
+<link rel="stylesheet" href={!! url("public/css/owl.carousel.css") !!}>
+<link rel="stylesheet" href={!! url("public/css/nivo-lightbox.css") !!}>
+<link rel="stylesheet" href={!! url("public/css/nivo_themes/default/default.css") !!}>
 
 <!-- COLORS -->
-<link rel="stylesheet" href="../public/assets/stylesheets/colors/slate.css">
+<link rel="stylesheet" href={!! url("public/css/colors/slate.css") !!}>
 
 <!-- PLAYER -->
-<script type="text/javascript" src="../public/assets/javascripts/soundmanager2.js"></script>
-<script type="text/javascript" src="../public/assets/javascripts/berniecode-animator.js"></script>
-<script type="text/javascript" src="../public/assets/javascripts/swfobject.js"></script>
-<link rel="stylesheet" type="text/css" href="stylesheets/inlineplayer.css" />
-<script type="text/javascript" src="../public/assets/javascripts/inlineplayer.js"></script>
+<script type="text/javascript" src={!! url("public/js/soundmanager2.js") !!}></script>
+<script type="text/javascript" src={!! url("public/js/berniecode-animator.js") !!}></script>
+<script type="text/javascript" src={!! url("public/js/swfobject.js") !!}></script>
+<link rel="stylesheet" type="text/css" href={!! url("public/css/inlineplayer.css") !!} />
+<script type="text/javascript" src={!! url("public/js/inlineplayer.js") !!}></script>
 
 <!-- CUSTOM STYLESHEETS -->
-<link rel="stylesheet" href="../public/assets/stylesheets/styles.css">
+<link rel="stylesheet" href={!! url("public/css/styles.css") !!}>
 
 <!-- RESPONSIVE FIXES -->
-<link rel="stylesheet" href="../public/assets/stylesheets/responsive.css">
+<link rel="stylesheet" href={!! url("public/css/responsive.css") !!}>
 
 <!--[if lt IE 9]>
-<script src="../public/assets/js/html5shiv.js"></script>
-<script src="../public/assets/js/respond.min.js"></script>
+    <script src="../public/js/html5shiv.js"></script>
+    <script src="../public/js/respond.min.js"></script>
 <![endif]-->

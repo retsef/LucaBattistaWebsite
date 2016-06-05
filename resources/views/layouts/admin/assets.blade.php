@@ -1,7 +1,7 @@
 <!-- BOOTSTRAP -->
-<link rel="stylesheet" href="../../public/assets/stylesheets/bootstrap.min.css">
+<link href={!! url("public/css/bootstrap.min.css") !!} media="all" rel="stylesheet" type="text/css" />
 
 <!--[if lt IE 9]>
-    <script src="../../public/assets/js/html5shiv.js"></script>
-    <script src="../../public/assets/js/respond.min.js"></script>
+    <script src="../../public/js/html5shiv.js"></script>
+    <script src="../../public/js/respond.min.js"></script>
 <![endif]-->
