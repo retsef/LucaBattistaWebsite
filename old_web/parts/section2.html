@@ -1,0 +1,48 @@
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+    $(function() {
+        $.getJSON('../content/bio.json', function(data) {
+
+            $( "#bio_title" ).replaceWith( "<h2>"+data.title+"</h2>" );
+            $( "#bio_description" ).replaceWith( "<p>"+data.description+"</p>" );
+            $( "#bio_photo" ).replaceWith( "<img id=\"bio_photo\" src=\""+data.photo+"\" alt=\"Feature\" class=\"img-responsive\">" );
+
+        });
+    });
+</script>
+
+<section class="section2 bgcolor-2" id="section2">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <!-- DETAILS WITH LIST -->
+                <div class="brief text-left">
+
+                    <!-- HEADING -->
+                    <h2 id="bio_title"></h2>
+                    <div class="colored-line pull-left">
+                    </div>
+
+                    <!-- TEXT -->
+                    <p id="bio_description"></p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <!-- SCREENSHOT -->
+                <div class="side-screenshot2 pull-right">
+                    <img id="bio_photo" src="images/pic/foto_interno.jpg" alt="Feature" class="img-responsive">
+                </div>
+            </div>
+
+        </div> <!-- END ROW -->
+
+    </div> <!-- END CONTAINER -->
+
+</section>
